@@ -1,10 +1,10 @@
 class Teacher:
     def __init__(self, name):
         self._name = name  # Name is marked as protected (can be accessed by subclasses)
-        self.__contact_info = "Not provided"  # Default contact information
+        self.__contact_info = "Not provided"  # Default contact information.It is set as Private Attribute.
 
     def introduce(self):
-        return f"Hello, I am {self._name}, a teacher."
+        return f"{self._name} is an Assistant Professor."
 
     def get_contact_info(self):
         return self.__contact_info
@@ -13,32 +13,32 @@ class Teacher:
 class Salary(Teacher):
     def __init__(self, name):
         super().__init__(name)
-        self._salary = 5000  # Default salary is set to 5000
+        self._salary = 50000  # Default salary is set to 50000 and is set as private attribute.
 
     def display_salary(self):
-        return f"My salary is {self._salary} per month."
+        return f"Salary = {self._salary} per month."
 
 
 class Experience(Teacher):
     def __init__(self, name):
         super().__init__(name)
-        self._years_of_experience = 5  # Default experience is set to 5 years
+        self._years_of_experience = 5  # Default experience is set to 5 years.It is set as public.
 
     def display_experience(self):
-        return f"I have {self._years_of_experience} years of teaching experience."
+        return f"{self._years_of_experience} years of teaching experience."
 
 
 class Department(Teacher):
     def __init__(self, name):
         super().__init__(name)
-        self._department = "General"  # Default department is set to General
+        self._department = "Software Engineering"  # Default department is set to General.It is a public attribute.
 
     def display_department(self):
-        return f"I belong to the {self._department} department."
+        return f"{self._department} department."
 
 
 def main():
-    # Get teacher's name as input
+    # Get the teacher's name as input
     teacher_name = input("Enter the teacher's name: ")
 
     # Creating instances of the Teacher, Salary, Experience, and Department classes
