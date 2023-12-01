@@ -1,7 +1,9 @@
+#Hammad Khan
+#Roll no: S23BSEEN1E02007
 class Teacher:
     def __init__(self, name):
         self._name = name  # Name is marked as protected (can be accessed by subclasses)
-        self.__contact_info = "Not provided"  # Default contact information.It is set as Private Attribute.
+        self.__contact_info = "Not provided"  # Default contact information.It is set as a Private Attribute.
 
     def introduce(self):
         return f"{self._name} is an Assistant Professor."
@@ -13,7 +15,7 @@ class Teacher:
 class Salary(Teacher):
     def __init__(self, name):
         super().__init__(name)
-        self._salary = 50000  # Default salary is set to 50000 and is set as private attribute.
+        self._salary = 50000  # Default salary is set to 50000 and is set as a private attribute.
 
     def display_salary(self):
         return f"Salary = {self._salary} per month."
