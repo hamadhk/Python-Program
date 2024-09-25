@@ -1,5 +1,6 @@
 #Hammad Khan
 #Roll no: S23BSEEN1E02007
+#section: 1E
 class Teacher:
     def __init__(self, name):
         self._name = name  # Name is marked as protected (can be accessed by subclasses)
